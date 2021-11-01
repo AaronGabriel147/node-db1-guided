@@ -29,7 +29,7 @@ async function getById(id) {
 async function create(newPost) {
   const [id] = await db('posts').insert(newPost)
   const post = await getById(id) // not necessary in Postgres
-  console.log(post)
+  return post
 }
 
 async function update() {
