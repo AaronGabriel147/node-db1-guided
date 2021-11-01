@@ -38,6 +38,7 @@ async function update(id, post) {
   return getById(id)
 }
 
-async function remove() {
-  const result = await db('posts').del()
+async function remove(id) {
+  const result = await db('posts').del().where('id', id)
+  console.log(result)
 }
