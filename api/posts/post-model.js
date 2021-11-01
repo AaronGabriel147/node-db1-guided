@@ -17,8 +17,9 @@ async function get() {
   return result
 }
 
-async function getById() {
-  const result = await db('posts').where()
+async function getById(id) {
+  const result = await db('posts').where('id', '=', id)
+  clog
 }
 
 async function create() {
