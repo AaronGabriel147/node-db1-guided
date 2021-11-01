@@ -20,7 +20,7 @@ async function get() {
 async function getById(id) {
   // const result = await db('posts').where('id', '=', id)
   // const result = await db('posts').where({ id })
-  // const result = await db.raw(`SELECT * FROM posts WHERE id = ${id}`)
+  // const result = await db.raw(`SELECT * FROM posts WHERE id = ${id}`) // bad!!!
   const result = await db('posts').where('id', id).first()
   console.log(result)
   return result
