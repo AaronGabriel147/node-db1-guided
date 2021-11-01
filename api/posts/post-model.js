@@ -33,6 +33,7 @@ async function create(newPost) {
 }
 
 async function update(id, post) {
+  // UPDATE posts SET 
   await db('posts').update(post).where('id', id)
   return getById(id)
 }
