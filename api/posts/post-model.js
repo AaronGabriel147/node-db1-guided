@@ -26,8 +26,8 @@ async function getById(id) {
   return result
 }
 
-async function create() {
-  return 'create wired'
+async function create(newPost) {
+  const result = await db('posts').insert(newPost)
 }
 
 async function update() {
