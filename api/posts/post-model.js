@@ -18,7 +18,7 @@ async function get() {
 }
 
 async function getById() {
-  return 'getById wired'
+  const result = await db('posts').where()
 }
 
 async function create() {
