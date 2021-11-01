@@ -42,5 +42,5 @@ async function remove(id) {
   const result = await db('posts').del().where('id', id)
   console.log(result)
   // how do we return the deleted record??????
-  
+  return result // just an integer!
 }
