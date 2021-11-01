@@ -18,7 +18,9 @@ async function get() {
 }
 
 async function getById(id) {
-  const result = await db('posts').where('id', '=', id)
+  // const result = await db('posts').where('id', '=', id)
+  // const result = await db('posts').where({ id })
+  const result = await db('posts').where('id', id)
   console.log(result)
 }
 
