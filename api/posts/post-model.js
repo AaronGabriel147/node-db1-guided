@@ -1,3 +1,5 @@
+const db = require('../../data/db-config.js')
+
 module.exports = {
   get,
   getById,
@@ -7,7 +9,7 @@ module.exports = {
 }
 
 async function get() {
-  return 'get wired'
+  
 }
 
 async function getById() {
