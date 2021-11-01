@@ -9,8 +9,9 @@ module.exports = {
 }
 
 async function get() {
-  // const result = await db('posts') // SELECT * FROM posts
-  // return result
+  const result = await db('posts') // SELECT * FROM posts
+  console.log(result)
+  return result
 }
 
 async function getById() {
