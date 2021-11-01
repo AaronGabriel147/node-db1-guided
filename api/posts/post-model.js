@@ -9,7 +9,9 @@ module.exports = {
 }
 
 async function get() {
-  const result = await db('posts') // SELECT * FROM posts;
+  // SELECT * FROM posts;
+  // const result = await db('posts')
+  const result = await db.select('*').from('posts')
   console.log(result)
   return result
 }
