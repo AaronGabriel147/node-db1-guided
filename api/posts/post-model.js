@@ -41,4 +41,6 @@ async function update(id, post) {
 async function remove(id) {
   const result = await db('posts').del().where('id', id)
   console.log(result)
+  // how do we return the deleted record??????
+  
 }
