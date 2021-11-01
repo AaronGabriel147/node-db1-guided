@@ -11,7 +11,8 @@ module.exports = {
 async function get() {
   // SELECT * FROM posts;
   // const result = await db('posts')
-  const result = await db.select('*').from('posts')
+  // const result = await db.select('*').from('posts')
+  const result = await db.raw('SELECT * FROM posts;')
   console.log(result)
   return result
 }
