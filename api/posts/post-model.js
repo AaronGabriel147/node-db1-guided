@@ -20,8 +20,8 @@ async function get() {
 async function getById(id) {
   // const result = await db('posts').where('id', '=', id)
   // const result = await db('posts').where({ id })
-  const result = await db('posts').where('id', id)
-  console.log(result)
+  const result = await db('posts').where('id', id).first()
+  return result
 }
 
 async function create() {
