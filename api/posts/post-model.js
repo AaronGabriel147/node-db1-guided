@@ -27,7 +27,7 @@ async function getById(id) {
 }
 
 async function create(newPost) {
-  const id = await db('posts').insert(newPost)
+  const [id] = await db('posts').insert(newPost)
   console.log(id)
 }
 
