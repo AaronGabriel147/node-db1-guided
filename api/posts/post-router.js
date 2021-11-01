@@ -58,7 +58,7 @@ router.delete('/:id', checkId, async (req, res, next) => {
 
 router.use((err, req, res, next) => { // eslint-disable-line
   res.status(err.status || 500).json({
-    message: err.message,
+    message: err.message, // not suitable for prod
     stack: err.stack,
   })
 })
