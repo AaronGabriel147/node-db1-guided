@@ -33,11 +33,11 @@ async function create(newPost) {
 }
 
 async function update(id, post) {
-  // UPDATE posts SET 
+  // UPDATE posts SET title='foo', contents='bar' WHERE id=17;
   await db('posts').update(post).where('id', id)
   return getById(id)
 }
 
 async function remove() {
-  return 'delete wired'
+  const result = await db('posts').del()
 }
