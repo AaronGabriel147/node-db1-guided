@@ -33,7 +33,7 @@ async function create(newPost) {
 }
 
 async function update() {
-  return 'update wired'
+  const result = db('posts')
 }
 
 async function remove() {
